@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cmmanuelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cmmanuelpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: cmmanuelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cmmanuelpipelinesjavascriptdocker 
+          image: testmcmcr.azurecr.io/cmmanuelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
